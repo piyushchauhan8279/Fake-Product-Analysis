@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/add_product.css') }}">
+  <title>Add Product</title>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+  
+  <form method="post" action="/add_product" class="add-product-form">
+    <h2>Add Product</h2>
+    <label for="productname">Product Name:</label>
+    <input type="text" id="productname" placeholder="Enter product name" name="productname" required>
+    
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" placeholder="Enter Brand" name="brand" required>
+    
+    <label for="productid">Product ID:</label>
+    <input type="text" id="productid" placeholder="Enter Product ID" name="productid" required>
+
+    <label for="retailprice">Retail Price:</label>
+    <input type="text" id="retailprice" placeholder="Enter Retail Price" name="retailprice" required>
+    
+    <label for="discountedprice">Discounted Price:</label>
+    <input type="text" id="discountedprice" placeholder="Enter  Discounted Price" name="discountedprice" required>
+   
+    <button type="submit" class="submit-btn">Add Block</button>
+  </form>   
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/search_product.css') }}">
+  <title>Search Product</title>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/home">Home</a></li>
+    </ul>
+  </nav>
+  
+  <form method="post" action="/search_product" class="search-product-form" enctype="multipart/form-data">
+    <h2>Search Product</h2>
+    <label for="productname">Product Name:</label>
+    <input type="text" id="productname" placeholder="Enter product name" name="productname">
+
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" placeholder="Enter Brand" name="brand">
+  
+    <label for="productid">Product ID:</label>
+    <input type="text" id="productid" placeholder="Enter Product ID" name="productid">
+  
+    <label for="uniqueid">Unique ID:</label>
+    <input type="text" id="uniqueid" placeholder="Enter Unique ID" name="uniqueid">
+
+    <label for="retailprice">Retail Price:</label>
+    <input type="text" id="retailprice" placeholder="Enter retail price" name="retailprice">
+   
+    <label for="discountedprice">Discounted Price:</label>
+    <input type="text" id="discountedprice" placeholder="Enter  Discounted Price" name="discountedprice">
+    
+    {% if error_message %}
+        <div class="error-message">
+            {{ error_message }}
+        </div>
+    {% endif %}
+    
+    <p>OR</p>
+    
+    <label for="qrCodeImage">Upload QR Code</label>
+    <input type="file" accept="image/*" id="qrCodeImage" name="qrCodeImage">
+    
+    <button type="submit" class="submit-btn">Search Product</button>
+  </form>   
+    </script>
+</body>
+</html>

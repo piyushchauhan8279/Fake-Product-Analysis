@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/search_result.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/home">Home</a></li>
+      </ul>
+   </nav>
+  
+    <div class="container">
+        <header>
+            <h1>Search Result</h1>
+        </header>
+        <section class="main-content">
+            {% if search_result %}
+                <div class="product-details">
+                    <h2>Product Details</h2>
+                    <p><strong>Brand:</strong> {{ search_result.product_details.brand }}</p>
+                    <p><strong>Name:</strong> {{ search_result.product_details.productname }}</p>
+                    <p><strong>Exists:</strong> {{ search_result.product_details.exists }}</p>
+                    <p><strong>Product Id:</strong> {{ search_result.product_details.productid }}</p>
+                    <p><strong>Unique Id:</strong> {{ search_result.product_details.uniqueid }}</p>
+                    <p><strong>Retail Price:</strong> {{ search_result.product_details.retailprice }}</p>
+                    <p><strong>Discounted Price:</strong> {{ search_result.product_details.discountedprice }}</p>
+                    <p><strong>Manufacturer:</strong> {{ search_result.product_details.manufacturer }}</p>
+                    <p><strong>Timestamp:</strong> {{ search_result.product_details.timestamp }}</p>
+                    <!-- Add more product details as needed -->
+                </div>
+                <div class="result">
+                    <h2>Result</h2>
+                    <p>{% if search_result.isAuthentic %} The Product is Authentic
+                          {% else %} The Product is likely Fake
+                          {% endif %}</p>
+                </div>
+            {% else %}
+                <p>No results found</p>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>

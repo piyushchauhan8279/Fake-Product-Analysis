@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Confirm Transaction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/confirm.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+   </nav>
+
+    <div class="container">
+        <header>
+            <h1>Confirm Transaction</h1>
+        </header>
+        <section class="main-content">
+            <div class="confirmation-details">
+                <h2>Product Details</h2>
+                <p><strong>Name:</strong> {{ product_details.productname }}</p>
+                <p><strong>Product ID:</strong> {{ product_details.productid }}</p>
+                <p><strong>Brand:</strong> {{ product_details.brand }}</p>
+                <p><strong>Retail Price:</strong> {{ product_details.retailprice }}</p>
+                <p><strong>Discounted Price:</strong> {{ product_details.discountedprice }}</p>
+            </div>
+            {% if message %}
+                <div class="message">
+                    {{ message }}
+                </div>
+            {% else %}
+            <div class="confirm-button">
+                <form method="post" action="/confirm">
+                    <button type="submit">Confirm Transaction</button>
+                </form>
+            </div>
+            {% endif %}
+            <div class="qr-code-container">
+                {% if path %}
+                    <div class="qr-code">
+                        <h2>Scan QR Code</h2>
+                        <img src="{{ url_for('static', filename=path) }}" alt="QR Code">
+                    </div>
+               {% endif %}
+               {% if product_details.uniqueid %}
+                   <div class="unique_id">
+                       <p><strong>Unique ID:</strong> {{ product_details.uniqueid }}</p>
+                   </div>
+               {% endif %}
+           </div>
+        </section>
+    </div>
+</body>
+</html>
