@@ -1,0 +1,106 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+    border: 4px solid lightgreen;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    background: lightgreen;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+header {
+    background-color: black;
+    color: lightgreen;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.confirmation-details {
+    border: 2px solid lightgreen;
+    padding: 20px;
+    text-align: left;
+    max-width: 400px;
+}
+
+.confirmation-details,unique_id p {
+    margin: 10px 0px;
+}
+
+ p strong {
+    color: lightgreen;
+}
+
+.confirm-button {
+    text-align: center;
+}
+
+button {
+    background-color: lightgreen;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.message {
+    color: lightgreen;
+    margin: 10px 0px;
+}
+
+.qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-code {
+    border: 2px solid lightgreen;
+    text-align: center;
+    padding: 15px;
+    max-width: 400px;
+    margin: 10px 0px;
+}
+
+.qr-code img {
+    width: 100%;
+    padding-top: 10px;
+    max-width: 300px;
+    height: auto;
+}
+
+.unique_id {
+    text-align: center;
+}

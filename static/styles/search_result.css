@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: 'sans-serif;
+}
+
+.container {
+    border: 4px solid lightgreen;
+}
+
+.navbar {
+    background: lightgreen;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+header {
+    background-color: black;
+    color: lightgreen;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-details, .result {
+    border: 2px solid lightgreen;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.product-details p {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.product-details p strong {
+    color: lightgreen;
+}
+
+.result p {
+    font-weight: bold;
+    color: lightgreen;
+    margin: 10px 0;
+}
